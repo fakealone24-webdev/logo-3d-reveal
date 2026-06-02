@@ -784,8 +784,9 @@
                         }
                     },
                     (errorPipelineLogReport) => {
+                        console.error('GLB load failed:', errorPipelineLogReport);
                         // Fallback failure processing branch execution loop context maps
-                        this.pushLogToLoaderTerminal("Primary asset binary URI unallocated. Initializing procedural polyhedra engine matrices...");
+                        this.pushLogToLoaderTerminal(`GLB load failed: ${String(errorPipelineLogReport)}`);
                         this.proceduralFallbackActive = true;
                         this.generateHighDensityProceduralFallbackCoreGeometryEngine();
                     }
