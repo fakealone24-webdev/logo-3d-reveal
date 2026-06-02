@@ -759,7 +759,7 @@
                 this.pushLogToLoaderTerminal("Opening asynchronous binary streaming tunnel network ports...");
                 const gltfAssetLoaderStreamerInstance = new THREE.GLTFLoader();
                 
-                const targetModelGltfBinaryPathUrl = './model.glb';
+                const targetModelGltfBinaryPathUrl = new URL('./model.glb', window.location.href).toString();
                 
                 // Initiate non-blocking streaming network context file processing sequences
                 gltfAssetLoaderStreamerInstance.load(
